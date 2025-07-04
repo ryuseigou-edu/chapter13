@@ -15,10 +15,10 @@ public class Main {
 
         Hero h = new Hero();
 
-        h.hp = 100;
+        //h.hp = 100;
         h.name = "ミナト";
 
         h.sleep();
-        h.die();
+        //h.die();
     }
 }

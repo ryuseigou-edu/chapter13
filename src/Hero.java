@@ -10,6 +10,10 @@ public class Hero {
         System.out.println(this.name + "は死んでしまった！");
         System.out.println("GAME OVERです。");
     }
+    public void seppuku() {
+        System.out.println(this.name + "は切腹した！");
+        this.die();
+    }
     public void sleep() {
         this.hp = 100;
         System.out.println(this.name + "は眠って回復した！");
