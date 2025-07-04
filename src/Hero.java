@@ -6,6 +6,9 @@ public class Hero {
     public String getName() {
         return this.name;
     }
+    public int getHp() {
+        return this.hp;
+    }
     public void setName(String name) {// 妥当性チェック
         if (name == null) {
             throw new IllegalArgumentException("名前がnullである。処理を中断。");
@@ -17,6 +20,9 @@ public class Hero {
             throw new IllegalArgumentException("名前が長すぎる。処理を中断。");
         }
         this.name = name;
+    }
+    public void setHp(int hp) {
+        this.hp = hp;
     }
     void bye() {
         System.out.println("勇者は別れを告げた");
@@ -31,8 +37,8 @@ public class Hero {
     }
     public void attack(Matango m) {
         System.out.println(this.name + "の攻撃！");
-        System.out.println("お化けキノコ" + m.suffix + "から2ポイントの反撃を受けた");
-        this.hp -= 2;
+        System.out.println("お化けキノコ" + m.suffix + "から" + m.hp + "ポイントの反撃を受けた");
+        this.hp -= m.hp;
         if (this.hp <= 0) {
             this.die();
         }
